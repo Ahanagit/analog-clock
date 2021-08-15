@@ -1,0 +1,168 @@
+
+
+body{
+  background-color: grey;
+  background-image: url("https://wallup.net/wp-content/uploads/2018/10/05/40544-insect-mantis-butterfly-stem-flower-night-sneaking-danger-grass-hunting-insects-grass-nature.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+  background-color: rgba(128,128,128,0.3);
+}
+.fas{
+  margin-right: 4px;
+}
+.logo{
+  width: 20%;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: left;
+  padding-left: 60px;
+  padding-top: 5px;
+  cursor: pointer;
+  animation: beat 0.25s infinite alternate;
+}
+@keyframes beat {
+  to{transform: scale(1.4);}
+}
+.menu{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  width: 40%;
+  text-align: right;
+  margin-right: 30px;
+  position: relative;
+}
+.menu a{
+  text-decoration: none;
+  color: #fff;
+}
+.menu a:hover{
+  opacity: 0.5;
+  border-radius: 30px;
+}
+.menu-button{
+  font-weight: bold;
+  background-color: transparent;
+  padding: 15px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  color:#fff;
+  font-size: 1.4rem;
+}
+.dropdown-button{
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.5);
+  width: 158px;
+  z-index: 1;
+  margin-top: 6px;
+  height: 100px;
+  padding-right: 15%;
+}
+.menu-button:hover .dropdown-button{
+  display: block;
+
+}
+
+.main{
+  width:450px;
+  height: 450px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  margin: 50px auto;
+  border: 2px solid black;
+  position: relative;
+  font-weight: bolder;
+}
+.main .number{
+  --rotation:0;
+  position: absolute;
+  font-size: 1.5rem;
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  text-align: center;
+  transform: rotate(var(--rotation));
+}
+.main .number1{
+  --rotation:30deg;
+}
+.main .number2{
+  --rotation:60deg;
+}
+.main .number3{
+  --rotation:90deg;
+}
+.main .number4{
+  --rotation:120deg;
+}
+.main .number5{
+  --rotation:150deg;
+}
+.main .number6{
+  --rotation:180deg;
+}
+.main .number7{
+  --rotation:210deg;
+}
+.main .number8{
+  --rotation:240deg;
+}
+.main .number9{
+  --rotation:270deg;
+}
+.main .number10{
+  --rotation:300deg;
+}
+.main .number11{
+  --rotation:330deg;
+}
+.main .hand{
+  --rotation:0;
+  position: absolute;
+  bottom: 50%;
+  left:50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg) );
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 10;
+
+}
+
+.main .hand.second{
+  width: 3px;
+  height: 45%;
+  background-color: red;
+}
+.main .hand.minute{
+  width: 7px;
+  height: 40%;
+  background-color: black;
+}
+.main .hand.hour{
+  width: 10px;
+  height: 35%;
+  background-color: black;
+}
+.main::after{
+  content: '';
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50% ,-50%);
+}
